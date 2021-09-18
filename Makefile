@@ -1,5 +1,5 @@
 all:
-	g++ -Wall -O3 main.cpp -o youtube_tui
+	g++ -Wall -O3 -lcurl main.cpp curl.cpp -o youtube_tui
 run:
 	make all
 	./youtube_tui
