@@ -2,6 +2,17 @@ import requests
 import json
 import urllib.parse
 
+def load_config():
+    # eventually, these should reference the user's XDG variables
+    # try loading from these locations first
+    locations = ["$HOME/.config/yttui/yttuirc", "$HOME/.yttuirc"]
+    for loc in locations:
+        ...
+        # if file exists, open it and load it. Then break.
+        # else, create the file with defaults
+
+
+
 class Result:
     def __init__(self,title,channel,date,ID,thumbnail):
         self.title = title
