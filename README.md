@@ -7,7 +7,7 @@ RSS feeds) and view videos without using the proprietary web interface.
 Run the main file with python.
 
 ## Python Modules
-- Ueberzug
+- Ueberzug (for images, not implemented yet)
 
 ## TODO
 - UI
