@@ -12,7 +12,7 @@ Run the main file with python.
 ## TODO
 - UI
 - Images with Ueberzug
-- 'subscriptions' with RSS feeds
-- config file
-- open videos with configured video player
-
+- 'Subscriptions' with RSS feeds
+- Config file
+- Open videos with configured video player
+- Colour theme through user config (files?)
