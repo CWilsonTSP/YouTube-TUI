@@ -53,8 +53,8 @@ def current():
 def main():
     """main"""
     # ask the user for input
-    # current()
     load_config()
+    current()
 
 # if this file is the one that is run,
 if __name__ == "__main__":
