@@ -11,7 +11,10 @@ class Block:
         self.image = 0;
         self.window = curses.newwin(13,24, x, y)
         self.window.box()
-        self.window.addstr(9, 0, self.result.title)
+        if len(self.result.title) > 19:
+            self.window.addstr(9, 1, self.result.title[0:19] + "...")
+        else:
+            self.window.addstr(9, 1, self.result.title)
         self.window.addstr(10, 1, self.result.channel)
         self.window.addstr(11, 1, self.result.date)
     def add_image(self, canvas):
@@ -71,12 +74,16 @@ def run(stdscr):
         block.add_image(c)
         panel = curses.panel.new_panel(block.window)
 
+        done = False
 
-        curses.panel.update_panels()
-        curses.doupdate()
+        while done != True:
+            curses.panel.update_panels()
+            curses.doupdate()
+            stdscr.refresh()
 
-        stdscr.refresh()
-        stdscr.getkey()
+            pressed = stdscr.getkey()
+            if pressed == 'q':
+                done = True
 
 if __name__ == "__main__":
     curses.wrapper(run)
